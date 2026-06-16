@@ -178,7 +178,7 @@ try:
         for i in range(samples):
             t = i / sample_rate
             # Экспоненциальное (очень резкое) падение частоты для эффекта щелчка при попадании
-            freq = 880 * math.exp(-t * 8)
+            freq = 600 * math.exp(-t * 8)
             # Плавное затухание громкости по экспоненте
             value = math.sin(2 * math.pi * freq * t) * math.exp(-t * 10)
             value = max(-0.99, min(0.99, value))
